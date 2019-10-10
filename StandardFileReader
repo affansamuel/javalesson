@@ -1,0 +1,25 @@
+New Class 1: FileData.java
+
+
+
+package com.readtextfile;
+
+import java.io.*;
+
+public class FileData {
+    public static void main(String[] args) throws IOException {
+
+        String file_name = "C:/Users/p790964/Desktop/RTT_AgreementMeasure.sql"; //Change the directory as per requirement
+
+        try {
+            BufferedReader inputStream = new BufferedReader(new FileReader(file_name));
+            String line = inputStream.readLine();
+            while(line != null) {
+                System.out.println(line);
+                line = inputStream.readLine();
+            }
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
